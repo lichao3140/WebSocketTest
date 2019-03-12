@@ -15,15 +15,15 @@ public class WebHttp {
     /**
      * 服务器地址
      */
-    private static String SERVER_IP = "http://61.154.164.33:5060/equipInfoApi/heartRegiSter?";
+    private static String SERVER_IP = "http://106.12.134.56:8080/equipInfoApi/heartRegiSter?sessionId=1812060001&tenantName=Doumen";
 
     public static void HeartBeat() {
         try {
 //            LogUtil.i(TAG, "HeartBeat JSON:" + new Gson().toJson(new HeartBeat(000, getDeviceId(), "终端连接成功")));
             OkHttpUtils.post()
-                    .url(SERVER_IP + "sessionId=Test0001")
+                    .url(SERVER_IP)
                     .addParams("code", "000")
-                    .addParams("deviceNum", "Test0001")
+                    .addParams("deviceNum", "1812060001")
                     .addParams("msg", "连接成功,终端心跳")
                     .build()
                     .execute(new StringCallback() {

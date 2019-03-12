@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         application = (MyApplication) getApplication();
 
-        RxWebSocket.get("ws://61.154.164.33:5060/wx?sessionId=Test0001")
+        RxWebSocket.get("ws://106.12.134.56:8080/wx?sessionId=1812060001&tenantName=Doumen")
                 .subscribe(new WebSocketSubscriber() {
                     @Override
                     protected void onOpen(@NonNull WebSocket webSocket) {
